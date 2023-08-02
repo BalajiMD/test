@@ -1,0 +1,9 @@
+{
+    "xsappname": "extnCertification",
+    "tenant-mode": "dedicated",
+    "oauth2-configuration": {
+        "redirect-uris": [
+          "https://ingenx-technology-llc-training-ingenx-dev-extncertifica3f5d3728.cfapps.eu10-004.hana.ondemand.com/login/callback"
+        ]
+        }
+}

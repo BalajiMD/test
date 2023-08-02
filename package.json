@@ -1,0 +1,41 @@
+{
+  "name": "extnCertification",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.3.0",
+    "@sap/cds": "^6",
+    "express": "^4",
+    "hdb": "^0.19.5",
+    "passport": "^0.6.0"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.10",
+    "axios": "^1.4.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
+    "jest": "^29.6.2",
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-escalationsfe": "cds watch --open escalationsfe/webapp/index.html?sap-ui-xx-viewCache=false",
+    "test": "npx jest"
+  },
+  "cds": {
+    "requires": {
+      "API_PURCHASEORDER_PROCESS_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_PURCHASEORDER_PROCESS_SRV"
+      },
+      "db": "hana-cloud",
+      "auth": "xsuaa"
+    }
+  },
+  "sapux": [
+    "app/escalationsfe"
+  ]
+}
